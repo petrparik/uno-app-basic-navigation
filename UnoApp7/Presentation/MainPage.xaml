@@ -1,0 +1,32 @@
+﻿<Page x:Class="UnoApp7.Presentation.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:UnoApp7.Presentation"
+      xmlns:uen="using:Uno.Extensions.Navigation.UI"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      NavigationCacheMode="Required"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer uen:Region.Attached="True">
+        <Grid uen:Region.Attached="True">
+            <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition />
+    </Grid.RowDefinitions>
+
+    <NavigationView Grid.Row="1" uen:Region.Attached="True">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="About" uen:Region.Name="About" />
+                <NavigationViewItem Content="Project" uen:Region.Name="Project" />
+            </NavigationView.MenuItems>
+            <NavigationView.Content>
+                <Grid uen:Region.Navigator="Visibility" uen:Region.Attached="True" Grid.Row="1">
+                <TextBlock Text="Three"
+               FontSize="24"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" />
+            </Grid>
+            </NavigationView.Content>
+        </NavigationView>
+    </Grid>
+    </ScrollViewer>
+</Page>
